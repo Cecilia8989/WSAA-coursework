@@ -1,3 +1,9 @@
+# Web Service and Application
+# assignement 4
+# Author: Cecilia Pastore 
+
+
+# import the needed library
 from github import Github
 from config import configK as cfg
 
@@ -14,6 +20,8 @@ def create_or_get_file(repo, filename, file_content):
     try:
         # Check if the file exists
         repo.get_contents(filename)
+        print(f"The file '{filename}' exist in the repository '{github_repository}'")
+        print(f"Changing the content based on the variable 'file_content'.")
     except Exception as e:
         # File doesn't exist, create it
         print(f"The file '{filename}' does not exist in the repository.")
@@ -46,7 +54,7 @@ def delete_file_if_requested(repo, filename):
             repo.delete_file(file_info.path, "Delete file", file_info.sha)
             print(f"The file '{filename}' has been deleted.")
     else:
-        print(f"The file is in the repository {github_repository}")
+        print(f"The file is in the repository '{github_repository}'")
             
 
 # Define the API key to be used

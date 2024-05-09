@@ -1,3 +1,7 @@
+# Web Service and Application
+# Author: Cecilia Pastore 
+
+
 # Import necessary libraries
 import requests
 from geopy.geocoders import Nominatim
